@@ -1,0 +1,130 @@
+body {
+    color:white;
+    background:#2E2E2E;
+    padding:0px;
+    text-align:center;
+}
+
+div.main {
+    width:350px;
+    margin:0px auto;
+    display:block;
+}
+
+h1 {
+    font-size:30px;
+    height:40px;
+    color:green;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background:#1E1E1E;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+h3 {
+    font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+    font-size:25px;
+    background:black;
+    padding:25px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+a.data {
+    margin-top:15px;
+    color:#FFFFFF;
+    font-family:sans-serif;
+    background-color:#1E1E1E;
+    padding:10px;
+}
+
+a.data:hover {
+    color:#CAFF70;
+    font-family:sans-serif;
+}
+
+a.button {
+    color:#000000;
+    background-color:#458B00;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:2px solid #5C5C5C;
+    width:180px;
+    height:20px;
+    font-size:24px;
+    font-style:bold;
+    text-shadow:2px 2px 20px #000000;
+    text-decoration:none;
+    font-family:sans-serif;
+    display:block;
+    padding:10px;
+    
+}
+
+a.button:hover {
+    color:#000000;
+    background-color:#CAFF70;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width:180px;
+    display:block;
+    height:20px;
+    font-size:24px;
+    font-style:normal;
+    text-decoration:none;
+    font-family:sans-serif;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+p {
+    background-color:black;
+}
+
+form {
+    font-family: Arial,Sans-Serif;
+    font-size: 13px;
+    background-color:black;
+    text-align:left;
+    padding:5px;
+}
+
+input {
+    font-family: Arial,Sans-Serif;
+    font-size: 13px;
+    width: 200px;
+    float:left;
+}
+
+input.submit {
+    width:auto;
+    background-color:#CAFF70;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:1px solid #FFFFFF;
+}
+
+select {
+    float:left;
+    text
+}
+
+fieldset {
+    border-color:green;
+    border-width:5px;
+    border-style:solid;
+}
+
+
+input.check {
+    width:25px;
+    margin:0;
+}
+
