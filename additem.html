@@ -9,38 +9,28 @@
 <meta name="author" content="Brandon McGhee" />
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <!-- Being Main DIV for Page, used later for CSS Markup -->
 <div class="main">
-<h1>Add Spirit</h1>
+<h1>Spirit Inventory</h1>
 <!-- Main form to add Spirit -->
 <form action="#" method="post">
     <fieldset>
-        <legend>Spirit Inventory Form:</legend>
-        <!-- Name of Spirit Input -->
-        <ul>
-            <li><label for="spiritName">Name of Spirit:</label><input id="spiritName" type="text" /><br /></li>
-        </ul>
+        <legend>Add Spirit Details</legend>
+            <label for="spiritName">Name of Spirit:</label><br />
+                <input id="spiritName" type="text" class="textstyle" /><br />
         <!-- Slider/Range for Bottle Size in Milliliters-->
-        <ul>
-            <li><label for="bottleMIL">Size of Bottle (milliliters)</label><input id="bottleMIL" type="range" min="375" max = "1140"/></li>
-        </ul>
+            <br /><label for="bottleMIL">Size of Bottle (milliliters)</label><br />
+                <input id="bottleMIL" type="range" min="375" max = "1140"/><br />
         <!-- Quality of Spirit/Shelve -->
-        <ul>
-            <li>
-                <label>Quality of Spirit:</label>
-                    <ul>
-                        <li><input type="checkbox" class="check" id="topShelve" /><label for="topShelve">Top Shelve</label></li>
-                        <li><input type="checkbox" class="check" id="middleShelve" /><label for="middleShelve">Middle Shelve</label></li>
-                        <li><input type="checkbox" class="check" id="bottomShelve" /><label for="bottomShelve">Bottom Shelve</label></li>
-                    </ul>
-            </li>
-        </ul>
+            <br /><label>Quality of Spirit:</label><br />
+                <input type="checkbox" class="check" id="topShelve" /><label for="topShelve">Top Shelve</label><br />
+                <input type="checkbox" class="check" id="middleShelve" /><label for="middleShelve">Middle Shelve</label><br />
+                <input type="checkbox" class="check" id="bottomShelve" /><label for="bottomShelve">Bottom Shelve</label><br />
             <!-- Spirit Family (Type of Spirit) -->
-        <ul>
-            <li>
-                <label>Spirit Family</label>
+            <br /><label>Spirit Family</label><br />
                     <select>
                         <option value="">Select Spirit Family</option>
                         <option value="whiskey">Whiskey</option>
@@ -52,26 +42,24 @@
                         <option value="brandy">Brandy</option>
                         <option value="vermouth">Vermouth</option>
                         <option value="sake">Sake</option>
-                    </select>
-            </li>
-        </ul>
+                    </select><br />
+
             <!-- Date input to reflect Purchase Date of Spirit -->
-        <ul>
-            <li>
-                <label for="datePurchase">Date of Purchase:</label>
-                    <input id="datePurchase" type="date" />
-            </li>
-        </ul>
+
+                <br /><label for="datePurchase">Date of Purchase:</label><br />
+                    <input id="datePurchase" type="date" class="textstyle" /><br />
+                    
             <!-- Hidden Input Field, as required -->
                 <input type="hidden" />
-            <input type="submit" value="Store Spirit" class="submit"/>
+            <br /><input type="submit" value="Store Spirit >>" class="submit" /><br />
     </fieldset>
 </form>
 <!-- Display and Clear Inventory Links set to # -->
 <br />
 <a href="#" class="data">Display Spirit Inventory</a>
-<br />
 <a href="#" class="data">Clear Stored Spirits</a>
+<br />
+<br />
 </div>
 </body>
 

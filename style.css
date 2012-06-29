@@ -1,6 +1,6 @@
 body {
     color:white;
-    background:#2E2E2E;
+    background:#556666;
     padding:0px;
     text-align:center;
 }
@@ -8,15 +8,23 @@ body {
 div.main {
     width:350px;
     margin:0px auto;
+    background:#000000;
     display:block;
+    border:8px solid #FAE291;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+span {
+    background:#dd9955;
 }
 
 h1 {
     font-size:30px;
     height:40px;
-    color:green;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    background:#1E1E1E;
     margin-top:0px;
     margin-bottom:0px;
 }
@@ -63,7 +71,7 @@ a.button {
     
 }
 
-a.button:hover {
+a.data:hover {
     color:#000000;
     background-color:#CAFF70;
     border-top-left-radius: 10px;
@@ -81,7 +89,6 @@ a.button:hover {
     padding-bottom:10px;
 }
 
-
 p {
     background-color:black;
 }
@@ -89,42 +96,50 @@ p {
 form {
     font-family: Arial,Sans-Serif;
     font-size: 13px;
-    background-color:black;
     text-align:left;
     padding:5px;
 }
 
-input {
-    font-family: Arial,Sans-Serif;
-    font-size: 13px;
-    width: 200px;
-    float:left;
-}
-
 input.submit {
     width:auto;
-    background-color:#CAFF70;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border:1px solid #FFFFFF;
+    background-color:#FFFFFF;
+    line-height:1;
+    border:3px solid #FFFFFF;
+    font-weight:bold;
+    font-size:18px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
 }
 
 select {
     float:left;
-    text
+}
+
+legend {
+    font-family:Arial,Helmet,Freesans,sans-serif;
+    font-size:14px;
+    text-decoration:underline;
+    color:white;
 }
 
 fieldset {
-    border-color:green;
-    border-width:5px;
-    border-style:solid;
+    background:#333333;
+    border:2px solid #FFFFFF;
 }
-
 
 input.check {
     width:25px;
     margin:0;
 }
 
+input.textstyle {
+    border:1px solid #FFFFFF;
+    background:#000000;
+    color:#FFFFFF;
+    font-size:11px;
+    
+}
