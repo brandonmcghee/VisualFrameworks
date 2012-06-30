@@ -23,12 +23,12 @@
                 <input id="spiritName" type="text" class="textstyle" /><br />
         <!-- Slider/Range for Bottle Size in Milliliters-->
             <br /><label for="bottleMIL">Size of Bottle (milliliters)</label><br />
-                <input id="bottleMIL" type="range" min="375" max = "1140"/><br />
+            375<input id="bottleMIL" type="range" min="375" max = "1140"/>1140<br />
         <!-- Quality of Spirit/Shelve -->
             <br /><label>Quality of Spirit:</label><br />
-                <input type="checkbox" class="check" id="topShelve" /><label for="topShelve">Top Shelve</label><br />
-                <input type="checkbox" class="check" id="middleShelve" /><label for="middleShelve">Middle Shelve</label><br />
-                <input type="checkbox" class="check" id="bottomShelve" /><label for="bottomShelve">Bottom Shelve</label><br />
+                <input type="radio" class="check" id="topShelve" name="shelve" value="top" /><label for="topShelve" class="shelve">Top Shelve</label><br />
+                <input type="radio" class="check" id="middleShelve" name="shelve" value="middle" /><label for="middleShelve" class="shelve">Middle Shelve</label><br />
+                <input type="radio" class="check" id="bottomShelve" name="shelve" value="bottom" /><label for="bottomShelve" class="shelve">Bottom Shelve</label><br />
             <!-- Spirit Family (Type of Spirit) -->
             <br /><label>Spirit Family</label><br />
                     <select>
@@ -57,6 +57,9 @@
 <!-- Display and Clear Inventory Links set to # -->
 <br />
 <a href="#" class="data">Display Spirit Inventory</a>
+<br />
+<br />
+<br />
 <a href="#" class="data">Clear Stored Spirits</a>
 <br />
 <br />

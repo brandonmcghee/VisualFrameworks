@@ -6,7 +6,7 @@ body {
 }
 
 div.main {
-    width:350px;
+    width:auto;
     margin:0px auto;
     background:#000000;
     display:block;
@@ -26,13 +26,12 @@ h1 {
     height:40px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin-top:0px;
-    margin-bottom:0px;
+    margin-bottom:15px;
 }
 
 h3 {
     font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
     font-size:25px;
-    background:black;
     padding:25px;
     margin-top:0px;
     margin-bottom:0px;
@@ -44,53 +43,6 @@ a.data {
     font-family:sans-serif;
     background-color:#1E1E1E;
     padding:10px;
-}
-
-a.data:hover {
-    color:#CAFF70;
-    font-family:sans-serif;
-}
-
-a.button {
-    color:#000000;
-    background-color:#458B00;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border:2px solid #5C5C5C;
-    width:180px;
-    height:20px;
-    font-size:24px;
-    font-style:bold;
-    text-shadow:2px 2px 20px #000000;
-    text-decoration:none;
-    font-family:sans-serif;
-    display:block;
-    padding:10px;
-    
-}
-
-a.data:hover {
-    color:#000000;
-    background-color:#CAFF70;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width:180px;
-    display:block;
-    height:20px;
-    font-size:24px;
-    font-style:normal;
-    text-decoration:none;
-    font-family:sans-serif;
-    padding-top:10px;
-    padding-bottom:10px;
-}
-
-p {
-    background-color:black;
 }
 
 form {
@@ -141,5 +93,15 @@ input.textstyle {
     background:#000000;
     color:#FFFFFF;
     font-size:11px;
-    
+    font-size:14px;
+}
+
+label {
+    font-size:16px;
+    text-decoration:underline;
+}
+
+label.shelve {
+    font-size:15px;
+    text-decoration:none;
 }
