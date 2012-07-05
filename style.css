@@ -1,20 +1,13 @@
 body {
     color:white;
-    background:#556666;
+    background:#6B6B6B;
     padding:0px;
-    text-align:center;
 }
 
 div.main {
     width:auto;
     margin:0px auto;
-    background:#000000;
-    display:block;
-    border:8px solid #FAE291;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+
 }
 
 span {
@@ -25,11 +18,11 @@ h1 {
     font-size:30px;
     height:40px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin-top:0px;
-    margin-bottom:15px;
+    margin-top:5px;
+    margin-bottom:0px;
 }
 
-h3 {
+h2 {
     font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
     font-size:25px;
     padding:25px;
@@ -37,12 +30,25 @@ h3 {
     margin-bottom:0px;
 }
 
-a.data {
+a {
     margin-top:15px;
     color:#FFFFFF;
     font-family:sans-serif;
-    background-color:#1E1E1E;
+    background-color:#1D4B61;
     padding:10px;
+    text-align:center;
+}
+
+a.display {
+    background-color:orange;
+}
+
+a.clear {
+    background-color:green;
+}
+
+a.add {
+    display:none;
 }
 
 form {
@@ -79,18 +85,18 @@ legend {
 }
 
 fieldset {
-    background:#333333;
+    background:#63A7C7;
     border:2px solid #FFFFFF;
 }
 
-input.check {
+input.radio {
     width:25px;
     margin:0;
 }
 
 input.textstyle {
     border:1px solid #FFFFFF;
-    background:#000000;
+    background:#999999;
     color:#FFFFFF;
     font-size:11px;
     font-size:14px;
@@ -104,4 +110,13 @@ label {
 label.shelve {
     font-size:15px;
     text-decoration:none;
+}
+
+ul {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    
+}
+
+li {
+    color:white;
 }
