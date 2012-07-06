@@ -9,6 +9,27 @@ window.addEventListener("DOMContentLoaded", function () {
         return theElement;
     }
     
+    function formValid() {
+        var spirit = documents.forms[0].spiritName;
+        
+    }
+    
+    function buildFamily() {
+        var formTag = document.getElementsByTagName("form"),
+           selectDiv = $('family'),
+            makeSelect = document.createElement('select');
+            makeSelect.setAttribute("id", "family");
+        for (var i = 0, j = spiritFamily.length; i < j; i++) {
+            var makeOption = document.createElement('option');
+            var optText = spiritFamily[i];
+            makeOption.setAttribute("value", optText);
+            makeOption.innerHTML = optText;
+            makeSelect.appendChild(makeOption);
+
+        }
+        selectDiv.appendChild(makeSelect);
+    }
+    
     //Find value of selected radio button
     function getSelectedRadio() {
         var radios = document.forms[0].shelve;
@@ -17,6 +38,14 @@ window.addEventListener("DOMContentLoaded", function () {
             if (radios[i].checked) {
                 shelveValue = radios[i].value;
             }
+        }
+    }
+    
+    function storedSpirits() {
+        if (localStorage === 0) {
+            $('clear').style.display = "none";
+        }else{
+            $('clear').style.dislay = "block";
         }
     }
     
@@ -45,10 +74,11 @@ window.addEventListener("DOMContentLoaded", function () {
         //Gather all form field values and store in an object.
         //Object properties contain array with the form label and input value.
         
+        formValid();
         getSelectedRadio();
         
         var item            = {};
-            item.spiritName = ["Spirit Name: ", $('spiritName').value];
+            item.spiritName = ["Name: ", $('spiritName').value];
             item.bottleMIL  = ["Bottle Size: ", $('bottleMIL').value + " ML"];
             item.shelve     = ["Shelve Quality: ", shelveValue];
             item.date       = ["Date Purchased: ", $('datePurchase').value];
@@ -60,8 +90,8 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     
     function getData() {
-        if (localStorage.length == 0) {
-            alert("You have not stored any spirits!");
+        if (localStorage.length === 0) {
+            alert("You have not stored any Spirits!");
             return;
         }
         
@@ -86,20 +116,44 @@ window.addEventListener("DOMContentLoaded", function () {
             for (var n in obj) {
                 var makeSubli = document.createElement('li');
                 makeSubList.appendChild(makeSubli);
-                var optSubText = obj [n] [0] + " " + obj [n] [1];
+                var optSubText = obj [n] [0] + "  " + obj [n] [1];
                 makeSubli.innerHTML = optSubText;
             }
         }
     }
     
     function clearData() {
-        window.localStorage.clear();
+        var answer = confirm("Do you want to clear all the Spirits in your Inventory?");
+        if (answer) {
+            if (localStorage.length === 0) {
+                alert("Spirit Storage is already Empty!")
+            }else{
+                localStorage.clear();
+                alert("Spirit Storage has been Emptied")
+                window.location.reload();
+            }
         toggleControls("off");
+        }else{
+            return false;
+        }
     }
     
     //Var defaults
     var shelveValue;
+    var spiritFamily = [
+                        "---Select Spirit Family---",
+                        "Whiskey",
+                        "Rum",
+                        "Vodka",
+                        "Gin",
+                        "Tequila",
+                        "Cognac",
+                        "Brandy",
+                        "Vermouth",
+                        "Sake"];
+    buildFamily();
     
+
     //Set Link & Submit Click Events
     var save = $('submit');
     save.addEventListener("click", storeData);

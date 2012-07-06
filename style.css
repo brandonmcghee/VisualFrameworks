@@ -1,6 +1,6 @@
 body {
     color:white;
-    background:#6B6B6B;
+    background:#39393B;
     padding:0px;
 }
 
@@ -19,7 +19,7 @@ h1 {
     height:40px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin-top:5px;
-    margin-bottom:0px;
+    text-align:center;
 }
 
 h2 {
@@ -30,24 +30,29 @@ h2 {
     margin-bottom:0px;
 }
 
+nav {
+    margin-bottom:10px;
+    text-align:center;
+}
+
 a {
-    margin-top:15px;
     color:#FFFFFF;
     font-family:sans-serif;
     background-color:#1D4B61;
     padding:10px;
-    text-align:center;
+
 }
 
 a.display {
-    background-color:orange;
+    background-color:#23242D;
 }
 
 a.clear {
-    background-color:green;
+    background-color:#787C90;
 }
 
 a.add {
+    display:#141729;
     display:none;
 }
 
@@ -85,7 +90,7 @@ legend {
 }
 
 fieldset {
-    background:#63A7C7;
+    background:#343536;
     border:2px solid #FFFFFF;
 }
 
@@ -95,9 +100,9 @@ input.radio {
 }
 
 input.textstyle {
-    border:1px solid #FFFFFF;
-    background:#999999;
-    color:#FFFFFF;
+    border:1px solid #000000;
+    background:#FFFFFF;
+    color:#000000;
     font-size:11px;
     font-size:14px;
 }
@@ -114,7 +119,7 @@ label.shelve {
 
 ul {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    
+    margin:15px;
 }
 
 li {

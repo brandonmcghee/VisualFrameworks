@@ -13,13 +13,18 @@
 </head>
 <body>
 <!-- Being Main DIV for Page, used later for CSS Markup -->
-<h1>Spirit Inventory</h1>
+    <h1>Spirit Inventory</h1>
+    <nav>
+        <a href="#" class="display" id="display">Display Spirits</a>
+        <a href="#" id="clear" class="clear">Clear Spirits</a>
+        <a href="additem.html" id="addNew" style:"display:none" class="add">Add Spirit</a>
+    </nav>
 <!-- Main form to add Spirit -->
-<form action="#" method="post" id="spiritForm">
-    <fieldset id="spirtFieldset">
-        <legend>Add Spirit Details</legend>
-            <label for="spiritName">Name of Spirit:</label><br />
-                <input id="spiritName" type="text" class="textstyle" /><br />
+    <form action="#" method="post" id="spiritForm">
+        <fieldset id="spirtFieldset">
+            <legend>Add Spirit Details</legend>
+                <label for="spiritName">Name of Spirit:</label><br />
+                    <input id="spiritName" type="text" class="textstyle" /><br />
         <!-- Slider/Range for Bottle Size in Milliliters-->
             <br /><label for="bottleMIL">Size of Bottle (milliliters)</label><br />
             375<input id="bottleMIL" type="range" min="375" max = "4500" />5000<br />
@@ -29,20 +34,11 @@
                 <input type="radio" class="radio" id="middleShelve" name="shelve" value="Middle Shelve" /><label for="middleShelve" class="shelve">Middle Shelve</label><br />
                 <input type="radio" class="radio" id="bottomShelve" name="shelve" value="Bottom Shelve" /><label for="bottomShelve" class="shelve">Bottom Shelve</label><br />
             <!-- Spirit Family (Type of Spirit) -->
-            <br /><label>Spirit Family</label><br />
-                    <select>
-                        <option value="">Select Spirit Family</option>
-                        <option value="whiskey">Whiskey</option>
-                        <option value="rum">Rum</option>
-                        <option value="vodka">Vodka</option>
-                        <option value="gin">Gin</option>
-                        <option value="tequila">Tequila</option>
-                        <option value="cognac">Cognac</option>
-                        <option value="brandy">Brandy</option>
-                        <option value="vermouth">Vermouth</option>
-                        <option value="sake">Sake</option>
-                    </select><br />
+            <br />
+            <div id="family"><label for="family">Spirit Family</label><br />
 
+            </div>
+            <br />
             <!-- Date input to reflect Purchase Date of Spirit -->
 
                 <br /><label for="datePurchase">Date of Purchase:</label><br />
@@ -53,17 +49,8 @@
     </fieldset>
     <br /><input type="submit" value="Store Spirit >>" class="submit" id="submit" /><br />
 </form>
-<!-- Display and Clear Inventory Links set to # -->
-<br />
-<a href="#" class="display" id="display">Display Spirit Inventory</a>
-<br />
-<br />
-<br />
-                <a href="additem.html" id="clear" class="clear">Clear Stored Spirits</a>
-                <br />
-                <br />
-                <br />
-                <a href="additem.html" id="addNew" style:"display:none" class="add">Add New Spirit</a>
+
+
 
         <script src="js/main.js" type="text/javascript"></script>
     </body>
