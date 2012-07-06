@@ -4,18 +4,8 @@ body {
     padding:0px;
 }
 
-div.main {
-    width:auto;
-    margin:0px auto;
-
-}
-
-span {
-    background:#dd9955;
-}
-
 h1 {
-    font-size:30px;
+    font-size:40px;
     height:40px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin-top:5px;
@@ -83,6 +73,18 @@ input.slider {
     font-size:14px;
 }
 
+input.radio {
+    width:25px;
+    margin:0;
+}
+
+input.textstyle {
+    border:1px solid #000000;
+    background:#FFFFFF;
+    color:#000000;
+    font-size:14px;
+}
+
 select {
     float:left;
 }
@@ -99,18 +101,6 @@ fieldset {
     border:2px solid #FFFFFF;
 }
 
-input.radio {
-    width:25px;
-    margin:0;
-}
-
-input.textstyle {
-    border:1px solid #000000;
-    background:#FFFFFF;
-    color:#000000;
-    font-size:14px;
-}
-
 label {
     font-size:16px;
     text-decoration:underline;
@@ -119,13 +109,4 @@ label {
 label.shelve {
     font-size:15px;
     text-decoration:none;
-}
-
-ul {
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin:15px;
-}
-
-li {
-    color:white;
 }

@@ -4,19 +4,13 @@
 
 window.addEventListener("DOMContentLoaded", function () {
     
+    //Search the document for an element and returns the element to 
     function $(x) {
         var theElement = document.getElementById(x);
         return theElement;
     }
     
-    //function formValid() {
-    //    var spirit = document.forms[0].spiritName;
-    //    var size = document.forms[0].bottleMIL;
-    //    var shelve = document.forms[0].shelve;
-    //    var family = document.forms[0].family;
-    //    var date = document.forms[0].datePurchase;
-   // }
-    
+    //Constructs the family select element filled with Family Spirits
     function buildFamily() {
         var formTag = document.getElementsByTagName("form"),
            selectDiv = $('family'),
@@ -43,14 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-    function storedSpirits() {
-        if (localStorage === 0) {
-            $('clear').style.display = "none";
-        }else{
-            $('clear').style.dislay = "block";
-        }
-    }
-    
+    //Toggles "on" and "off" if form is displayed
     function toggleControls(n){
         switch(n){
             case "on":
@@ -71,14 +58,15 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    //Stores data into Local Storage
     function storeData() {
         var id              = Math.floor(Math.random()*100000001);
         //Gather all form field values and store in an object.
         //Object properties contain array with the form label and input value.
         
-        //formValid();
+        //Caling Radio Function to see which one the user chose
         getSelectedRadio();
-        
+        //Stores form data into an object
         var item            = {};
             item.spiritName = ["Name: ", $('spiritName').value];
             item.bottleMIL  = ["Bottle Size: ", $('bottleMIL').value + " ML"];
@@ -90,13 +78,14 @@ window.addEventListener("DOMContentLoaded", function () {
         alert("Spirit Stored!");
         toggleControls("on");
     }
-    
+    //
     function getData() {
+        //Verify if local storage has items
         if (localStorage.length === 0) {
             alert("You have not stored any Spirits!");
             return;
         }
-        
+        //Hides the form
         toggleControls("on");
         //Write Data from Local Storage to browser
         var makeDiv = document.createElement('div');
@@ -124,6 +113,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    //Clears all Stored Spirit Inventory
     function clearData() {
         var answer = confirm("Do you want to clear all the Spirits in your Inventory?");
         if (answer) {
@@ -140,6 +130,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    //Gathers current value of Slider and displays it to a text field
     function slider() {
         var slide = $('bottleMIL').value;
         $('slideVAL').value = slide;
@@ -158,10 +149,12 @@ window.addEventListener("DOMContentLoaded", function () {
                         "Brandy",
                         "Vermouth",
                         "Sake"];
+    
+    //Calling buildFamily to construct drop down menut
     buildFamily();
     
 
-    //Set Link & Submit Click Events
+    //Set Store Spirit, Display Spirits, Clear Spirits and Slider Click Events
     var save = $('submit');
     save.addEventListener("click", storeData);
     
