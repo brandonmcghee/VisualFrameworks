@@ -9,10 +9,13 @@ window.addEventListener("DOMContentLoaded", function () {
         return theElement;
     }
     
-    function formValid() {
-        var spirit = documents.forms[0].spiritName;
-        
-    }
+    //function formValid() {
+    //    var spirit = document.forms[0].spiritName;
+    //    var size = document.forms[0].bottleMIL;
+    //    var shelve = document.forms[0].shelve;
+    //    var family = document.forms[0].family;
+    //    var date = document.forms[0].datePurchase;
+   // }
     
     function buildFamily() {
         var formTag = document.getElementsByTagName("form"),
@@ -25,7 +28,6 @@ window.addEventListener("DOMContentLoaded", function () {
             makeOption.setAttribute("value", optText);
             makeOption.innerHTML = optText;
             makeSelect.appendChild(makeOption);
-
         }
         selectDiv.appendChild(makeSelect);
     }
@@ -74,7 +76,7 @@ window.addEventListener("DOMContentLoaded", function () {
         //Gather all form field values and store in an object.
         //Object properties contain array with the form label and input value.
         
-        formValid();
+        //formValid();
         getSelectedRadio();
         
         var item            = {};
@@ -138,6 +140,11 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    function slider() {
+        var slide = $('bottleMIL').value;
+        $('slideVAL').value = slide;
+    }
+    
     //Var defaults
     var shelveValue;
     var spiritFamily = [
@@ -163,5 +170,8 @@ window.addEventListener("DOMContentLoaded", function () {
     
     var clear = $('clear');
     clear.addEventListener("click", clearData);
+    
+    var slide = $('bottleMIL')
+    slide.addEventListener("change", slider);
     
 });
