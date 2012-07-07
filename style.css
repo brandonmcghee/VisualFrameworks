@@ -16,8 +16,6 @@ h2 {
     font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
     font-size:25px;
     padding:25px;
-    margin-top:0px;
-    margin-bottom:0px;
 }
 
 nav {
@@ -101,6 +99,8 @@ fieldset {
     border:2px solid #FFFFFF;
 }
 
+
+
 label {
     font-size:16px;
     text-decoration:underline;
@@ -109,4 +109,13 @@ label {
 label.shelve {
     font-size:15px;
     text-decoration:none;
+}
+
+ul {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin:15px;
+}
+
+li {
+    color:white;
 }
