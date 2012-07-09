@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var item            = {};
             item.spiritName = ["Name: ", $('spiritName').value];
             item.bottleMIL  = ["Bottle Size: ", $('bottleMIL').value + " ML"];
-            item.shelve     = ["Shelve Quality: ", shelveValue];
+            item.shelve     = ["Quality: ", shelveValue];
             item.date       = ["Date Purchased: ", $('datePurchase').value];
             
         //Save into local storage: Use stringify to convert object to a string.
