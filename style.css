@@ -130,8 +130,12 @@ ul {
     
 }
 
+ul.errors {
+    color:red;
+    font-weight:bold;
+}
+
 li {
-    color:white;
     margin:5px;
     
 }

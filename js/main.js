@@ -38,28 +38,31 @@ window.addEventListener("DOMContentLoaded", function () {
         
         //Bottle Size Validation
         if (getBottle.value == "") {
-            var bottleError = "Please select a size of the bottle";
+            var bottleError = "Please select a Size of the Bottle";
             getBottle.style.border = "2px solid red";
             messageAry.push(bottleError);
         }
         
         //Shelve Quality Validation
-        if (getShelve.value == "") {
-            var shelveError = "Please select a shelve quality";
+        var radios = document.forms[0].shelve;
+        if (!radios[0].checked && !radios[1].checked && !radios[2].checked) {
+            var shelveError = "Please select a Shelve Quality";
             $('topShelve').style.border = "1px solid red";
+            $('middleShelve').style.border = "1px solid red";
+            $('bottomShelve').style.border = "1px solid red";
             messageAry.push(shelveError);
         }
         
         //Family Validation
         if (getFamily.value == "---Select Spirit Family---") {
-            var familyError = "Please select a spirit family";
+            var familyError = "Please select a Spirit Family";
             getFamily.style.border = "2px solid red";
             messageAry.push(familyError);
         }
         
         //Date Purchased Validation
         if (getDate.value == "") {
-            var dateError = "Please select a purchase date";
+            var dateError = "Please select a Purchase Date";
             getDate.style.border = "2px solid red";
             messageAry.push(dateError);
         }
@@ -100,7 +103,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function getSelectedRadio() {
         var radios = document.forms[0].shelve;
         
-        for (var i=0; i < radios.length; i++) {
+        for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 shelveValue = radios[i].value;
             }
