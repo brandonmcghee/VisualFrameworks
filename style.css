@@ -112,9 +112,13 @@ label.shelve {
 
 ul {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin:15px;
+    width:auto;
+    list-style-type:none;
+    text-align:left;
+    background-color:#555555;
 }
 
 li {
     color:white;
+    margin:0px;
 }

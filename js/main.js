@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var formTag = document.getElementsByTagName("form"),
            selectDiv = $('family'),
             makeSelect = document.createElement('select');
-            makeSelect.setAttribute("id", "family");
+            makeSelect.setAttribute("id", "spiritFamily");
         for (var i = 0, j = spiritFamily.length; i < j; i++) {
             var makeOption = document.createElement('option');
             var optText = spiritFamily[i];
@@ -71,6 +71,7 @@ window.addEventListener("DOMContentLoaded", function () {
             item.spiritName = ["Name: ", $('spiritName').value];
             item.bottleMIL  = ["Bottle Size: ", $('bottleMIL').value + " ML"];
             item.shelve     = ["Quality: ", shelveValue];
+            item.family     = ["Family: ", $('spiritFamily').value];
             item.date       = ["Date Purchased: ", $('datePurchase').value];
             
         //Save into local storage: Use stringify to convert object to a string.
@@ -132,8 +133,16 @@ window.addEventListener("DOMContentLoaded", function () {
     
     //Gathers current value of Slider and displays it to a text field
     function slider() {
+        var mil = ["375 ml", "750 ml", "1.5 L", "3000 L", "4500 L"];
         var slide = $('bottleMIL').value;
-        $('slideVAL').value = slide;
+        
+        //Changes the value of the "Size of Bottle" text box to reflect accurate measurements
+            for (var i = 0; i < mil.length; i++) {
+                if (i == slide) {
+                    $('slideVAL').value = mil[i];
+                }
+            }
+        
     }
     
     //Var defaults
@@ -150,7 +159,7 @@ window.addEventListener("DOMContentLoaded", function () {
                         "Vermouth",
                         "Sake"];
     
-    //Calling buildFamily to construct drop down menut
+    //Calling buildFamily to construct drop down menu
     buildFamily();
     
 
