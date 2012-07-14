@@ -27,6 +27,7 @@ a {
     font-family:sans-serif;
     background-color:#1D4B61;
     padding:10px;
+    margin:5px;
 
 }
 
@@ -41,6 +42,16 @@ a.clear {
 a.add {
     display:#141729;
     display:none;
+}
+
+a.edit {
+    background-color:#004400;
+    padding:5px !important;
+}
+
+a.delete {
+    background-color:#440000;
+    padding:5px !important;
 }
 
 form {
@@ -114,11 +125,13 @@ ul {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     width:auto;
     list-style-type:none;
-    text-align:left;
-    background-color:#555555;
+    margin:0px;
+    padding:2px;
+    
 }
 
 li {
     color:white;
-    margin:0px;
+    margin:5px;
+    
 }
