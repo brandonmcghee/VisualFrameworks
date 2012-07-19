@@ -165,8 +165,8 @@ window.addEventListener("DOMContentLoaded", function () {
     function getData() {
         //Verify if local storage has items
         if (localStorage.length === 0) {
-            alert("You have not stored any Spirits!");
-            return;
+            alert("You have not stored any Spirits! So they were filled for you from JSON");
+            autoFillData();
         }
         //Hides the form
         toggleControls("on");
@@ -196,6 +196,16 @@ window.addEventListener("DOMContentLoaded", function () {
                 makeSubList.appendChild(linksLi);
             }
             makeItemLinks(localStorage.key(i), linksLi);
+        }
+    }
+    
+    //Auto Populate Local Storage
+    function autoFillData() {
+        //The actual JSON Object data required for this to work is coming from the json file
+        //Store the JSON Object into Local Storage
+        for (var n in json) {
+            var id = Math.floor(Math.random()*100000001);
+            localStorage.setItem(id, JSON.stringify(json[n]));
         }
     }
     
