@@ -1,5 +1,5 @@
 //Brandon McGhee
-//Assignment 2
+//Assignment 3
 //VFW
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
         return theElement;
     }
     
-    //Validation
+    //Validation function
     function validate(e) {
         
         var getSpirit = $('spiritName');
@@ -199,6 +199,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    //Constructs delete and edit links
     function makeItemLinks(key, linksLi) {
         var breakTag = document.createElement('br');
         linksLi.appendChild(breakTag);
@@ -224,6 +225,7 @@ window.addEventListener("DOMContentLoaded", function () {
         
     }
     
+    //Function called to edit user's spirit
     function editSpirit() {
         
         var value = localStorage.getItem(this.key);
@@ -261,11 +263,12 @@ window.addEventListener("DOMContentLoaded", function () {
         editSubmit.key = this.key;
     }
     
+    //Function for deleting spirit from inventory
     function deleteSpirit() {
         var ask = confirm("Are you sure you want to delete this spirit from your inventory?");
         if (ask) {
             localStorage.removeItem(this.key);
-            alert("Spirt has been removed");
+            alert("Spirit has been removed");
             window.location.reload();
         }else{
             alert("Spirt was NOT removed.");
