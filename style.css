@@ -139,3 +139,8 @@ li {
     margin:5px;
     
 }
+
+div.cabinet {
+    border:8px solid #2c1d13;
+    background-image:url(images/woodbg.png);
+}

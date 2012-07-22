@@ -188,6 +188,7 @@ window.addEventListener("DOMContentLoaded", function () {
             var obj = JSON.parse(value);
             var makeSubList = document.createElement('ul');
             makeli.appendChild(makeSubList);
+            getImage(obj.family[1], makeSubList);
             for (var n in obj) {
                 var makeSubli = document.createElement('li');
                 makeSubList.appendChild(makeSubli);
@@ -197,6 +198,15 @@ window.addEventListener("DOMContentLoaded", function () {
             }
             makeItemLinks(localStorage.key(i), linksLi);
         }
+    }
+    
+    //Get Image for Spirit
+    function getImage(catName, makeSubList) {
+        var imageLi = document.createElement('li');
+        makeSubList.appendChild(imageLi);
+        var newImg = document.createElement('img');
+        var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+        imageLi.appendChild(newImg);
     }
     
     //Auto Populate Local Storage
@@ -257,10 +267,9 @@ window.addEventListener("DOMContentLoaded", function () {
             }else if (radios[i].value == "Bottom Shelve" && spirit.shelve[1] == "Bottom Shelve") {
                 radios[i].setAttribute("checked", "checked");
             }else{
-                //need something here!
+                return
             }
-            
-            
+        
         }
         
         //Remove the initial listener from the input Store Spirit button
