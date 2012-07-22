@@ -1,6 +1,6 @@
 body {
-    color:white;
-    background:#39393B;
+    color:#000000;
+    background-image:url(images/bg.png);
     padding:0px;
 }
 
@@ -9,12 +9,7 @@ h1 {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin-top:5px;
     text-align:center;
-}
-
-h2 {
-    font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
-    font-size:25px;
-    padding:25px;
+    color:#FFFFFF;
 }
 
 nav {
@@ -24,15 +19,25 @@ nav {
 
 a {
     color:#FFFFFF;
-    font-family:sans-serif;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size:18px;
     background-color:#1D4B61;
-    padding:10px;
+    padding:5px;
     margin:5px;
+    border:3px solid #000000;
 
 }
 
+a.header {
+    padding:0px !important;
+    margin:0px !important;
+    text-decoration:none;
+    border:0px !important;
+}
+
+
 a.display {
-    background-color:#23242D;
+    background-color:#c3a35e;
 }
 
 a.clear {
@@ -40,45 +45,62 @@ a.clear {
 }
 
 a.add {
-    display:#141729;
+    background-color:#4a8e47;
     display:none;
 }
 
 a.edit {
-    background-color:#004400;
+    background-color:#6b9ec9;
     padding:5px !important;
 }
 
 a.delete {
-    background-color:#440000;
+    background-color:#ba7a7a;
     padding:5px !important;
 }
 
+a.button {
+    width:250px;
+    color:#000000 !important;
+    text-decoration:none;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    background-color:#FFFFFF;
+    line-height:1;
+    border:3px solid black;
+    font-weight:bold;
+    font-size:24px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
 form {
-    font-family: Arial,Sans-Serif;
-    font-size: 13px;
     text-align:left;
     padding:5px;
 }
 
 input.submit {
-    width:auto;
+    width:250px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
     background-color:#FFFFFF;
     line-height:1;
-    border:3px solid #FFFFFF;
+    border:3px solid black;
     font-weight:bold;
-    font-size:18px;
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-    border-bottom: 1px solid rgba(0,0,0,0.25);
+    font-size:24px;
     -moz-border-radius: 5px;
-    -webkit-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 input.slider {
-    width:50px;
-    font-size:14px;
+    width:75px;
+    font-size:18px;
+    border:1px solid #000000;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 input.radio {
@@ -90,11 +112,23 @@ input.textstyle {
     border:1px solid #000000;
     background:#FFFFFF;
     color:#000000;
-    font-size:14px;
+    font-size:18px;
+    width:250px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+input.range {
+    width:250px;
 }
 
 select {
     float:left;
+    font-size:18px;
+    width:250px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 legend {
@@ -104,16 +138,10 @@ legend {
     color:white;
 }
 
-fieldset {
-    background:#343536;
-    border:2px solid #FFFFFF;
-}
-
-
-
 label {
     font-size:16px;
     text-decoration:underline;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 label.shelve {
@@ -133,14 +161,44 @@ ul {
 ul.errors {
     color:red;
     font-weight:bold;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 li {
     margin:5px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     
 }
 
 div.cabinet {
     border:8px solid #2c1d13;
     background-image:url(images/woodbg.png);
+}
+
+label {
+    font-size:20px;
+    font-weight:bold;
+}
+
+label.shelve {
+    font-size:18px;
+    font-weight:normal;
+}
+
+fieldset {
+    border:none;
+}
+
+img.splash {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+p {
+    text-align:center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    color:#f9ff94;
 }

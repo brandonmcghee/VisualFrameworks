@@ -89,6 +89,7 @@ window.addEventListener("DOMContentLoaded", function () {
            selectDiv = $('family'),
             makeSelect = document.createElement('select');
             makeSelect.setAttribute("id", "spiritFamily");
+            makeSelect.setAttribute("class", "dropdown");
         for (var i = 0, j = spiritFamily.length; i < j; i++) {
             var makeOption = document.createElement('option');
             var optText = spiritFamily[i];
@@ -230,6 +231,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var editText = "Edit Spirit";
         editLink.addEventListener("click", editSpirit);
         editLink.innerHTML = editText;
+        linksLi.appendChild(breakTag);
         linksLi.appendChild(editLink);
         
         var deleteLink = document.createElement('a');
@@ -240,7 +242,6 @@ window.addEventListener("DOMContentLoaded", function () {
         deleteLink.addEventListener("click", deleteSpirit);
         deleteLink.innerHTML = deleteText;
         linksLi.appendChild(deleteLink);
-        
         linksLi.appendChild(breakTag);
         
     }
